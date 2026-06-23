@@ -259,11 +259,19 @@
     </div>
   </footer>
 
-  <script>
-    const burger = document.getElementById('burger');
-    const nav = document.getElementById('navMobile');
-    classList.toggle('open'); document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : ''; });
-  </script>
+ <script>
+  var b = document.getElementById('burger');
+  var m = document.getElementById('navMobile');
+  b.onclick = function() {
+    if (m.style.display === 'flex') {
+      m.style.display = 'none';
+      document.body.style.overflow = '';
+    } else {
+      m.style.display = 'flex';
+      document.body.style.overflow = 'hidden';
+    }
+  };
+</script>
 
 </body>
 </html>
