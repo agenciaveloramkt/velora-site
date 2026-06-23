@@ -13,6 +13,7 @@
 <body>
 
   <nav class="nav">
+  <input type="checkbox" id="nav-toggle">
     <div class="container nav-inner">
       <a href="index.html" class="nav-logo">
         <span class="nav-logo-text">VELORA</span>
@@ -23,9 +24,9 @@
         <a href="contato.html" class="active">Contato</a>
         <a href="contato.html" class="nav-cta">Falar com um especialista</a>
       </div>
-      <button class="nav-burger" id="burger" aria-label="Abrir menu">
+      <label for="nav-toggle" class="nav-burger" aria-label="Abrir menu">
         <span></span><span></span><span></span>
-      </button>
+      </label>
     </div>
     <nav class="nav-mobile" id="navMobile">
       <a href="index.html">Início</a>
@@ -196,18 +197,6 @@
       </div>
     </div>
   </footer>
-
-  <script>
-    const burger = document.getElementById('burger');
-    const nav = document.getElementById('navMobile');
-   classList.toggle('open'); document.body.style.overflow = nav.classList.contains('open') ? 'hidden' : ''; });
-
-    document.getElementById('contactForm').addEventListener('submit', function(e) {
-      e.preventDefault();
-      this.style.display = 'none';
-      document.getElementById('successMsg').style.display = 'block';
-    });
-  </script>
 
 </body>
 </html>
